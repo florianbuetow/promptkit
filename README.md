@@ -30,9 +30,22 @@ To leverage these guidelines directly within your Cursor IDE for features like `
 1.  **Locate/Create the Cursor Rules Directory:** In the root directory of your project, find or create a hidden directory named `.cursor`. Inside it, find or create another directory named `rules`.
 2.  **Copy the Guide:** Place the `fullstack_guide.mdc` file from this repository into the `.cursor/rules/` directory.
 
+
+# Guides
+
+I created some guides with AI (Grok, Gemini, ChatGPT) using web search to compile and distill best practices and actionable advice.
+
+You might find them useful too:
+
+```
+├── guides
+│   ├── General Insights on Project Plan Templates in Dev Workflows.pdf
+│   └── To maximize productivity with Cursor AI and effectively break down tasks, here are concrete tips based on best practices and insights from developers, including.pdf
+```
+
 # How to create your own cursorrules
 
-# Preparation:
+## Preparation:
 
 Collect a list of resources that give good advice on coding and best practices with the technologies that you are using in your project.
 
