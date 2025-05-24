@@ -107,3 +107,10 @@ We need to create a revision because we will use FastAPI and Python for the back
 
 I then got an updated version in markdown format that I could save as a cursor rules mdc file.
 
+# Tools
+
+You can find a [curated list of tools and plugins for working with an AI powered developer workflow here](tools/README.md) 
+
+# Resources
+
+[cursor.directory](https://cursor.directory/rules)
