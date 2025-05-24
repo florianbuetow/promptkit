@@ -1,0 +1,154 @@
+## 🚀 Introduction
+
+This document outlines the core principles, rules, and best practices that every engineer on our team must follow. It consolidates guidelines for both front-end and back-end development, focusing on our primary technology stack. Adhering to these standards ensures consistency, quality, and collaboration across all our projects.
+
+**Our Technology Stack:**
+
+* **Front-End:** ReactJS, JavaScript, TypeScript, TailwindCSS, HTML, CSS
+* **Back-End:** Python, FastAPI, SQLModel, SQLAlchemy
+
+---
+
+## 📜 Core Development Principles
+
+These universal rules apply to all code you write, regardless of the technology.
+
+### 1. Planning & Requirements
+
+* **Follow Requirements Strictly:** Adhere carefully and precisely to the user's requirements.
+* **Think First:** Before writing any code, think step-by-step. Describe your plan in detailed pseudocode.
+* **Confirm, Then Code:** Ensure your plan is solid before implementation.
+* **Plan Larger Projects:** For long-term projects, invest time in planning data structures and UI to increase success rates.
+
+### 2. Code Quality & Style
+
+* **Correctness & Best Practices:** Always write code that is correct, follows best practices, adheres to the DRY principle (Don't Repeat Yourself), is bug-free, fully functional, and working.
+* **Readability Over Performance:** Prioritize writing code that is easy to understand and read.
+* **Conciseness:** Be concise in your code and minimize unnecessary prose.
+* **Functional & Declarative:** Use functional and declarative programming styles where possible, avoiding classes except for Pydantic/SQLModel models.
+* **Iteration & Modularity:** Prefer iteration and modular approaches over duplicating code.
+* **Descriptive Naming:** Use descriptive names for variables and functions/constants.
+* **File Naming:** Use lowercase with underscores for directories and files (e.g., `routers/user_routes.py`).
+* **RORO Pattern:** Use the "Receive an Object, Return an Object" pattern.
+* **Imports & Naming:** Include all necessary imports and ensure proper naming of key components.
+
+### 3. Completeness & Honesty
+
+* **Full Implementation:** Fully implement all requested functionality.
+* **No Placeholders:** Leave NO todos, placeholders, or missing pieces.
+* **Verify Completion:** Ensure code is complete by thoroughly verifying it.
+* **Acknowledge Uncertainty:** If you think there might not be a correct answer or if you don't know the answer, say so instead of guessing.
+
+---
+
+## 💻 Front-End Development (React, JS/TS, Tailwind)
+
+Guidelines for building our user interfaces.
+
+### 1. General Practices
+
+* **Early Returns:** Use early returns whenever possible to enhance code readability.
+* **Function/Const Style:** Use `const`s for functions (e.g., `const toggle = () => {};`) and define types when possible.
+* **Naming Conventions:** Name event handler functions with a "handle" prefix (e.g., `handleClick`, `handleKeyDown`).
+
+### 2. Styling (TailwindCSS)
+
+* **Tailwind First:** Always use Tailwind classes for styling HTML elements.
+* **Avoid CSS/Style:** Avoid using plain CSS or inline `style` tags whenever possible.
+* **Class Syntax:** Use `class:` instead of the tertiary operator in class tags when feasible.
+
+### 3. Accessibility (a11y)
+
+* **Implement Features:** Actively implement accessibility features. For example, an `<a>` tag should have `tabindex="0"`, an `aria-label`, and appropriate event handlers (`on:click`, `on:keydown`).
+
+### 4. React Hooks
+
+* **Function Components Only:** Only call Hooks inside function components or custom hooks.
+* **Top-Level Calls:** Call Hooks at the top level of your components, in the same order on every render. Do not call them inside conditions, loops, or nested functions.
+* **Functional State Updates:** When updating state based on the previous value, use the functional update form (e.g., `setState(prevState => ...)`).
+* **Initial State Computation:** If initial state calculation is expensive, pass a function to `useState` (e.g., `useState(() => computeExpensiveValue())`).
+* **Object State Updates:** Remember that `useState` *replaces* state. When updating objects, explicitly merge the previous state using the spread operator (`...prevState`).
+* **Multiple State Hooks:** Prefer multiple `useState` hooks for managing different pieces of state over a single large state object.
+
+### 5. State Management
+
+* **Built-ins First:** Start with React's built-in tools (`useState`, `useContext`, `useReducer`) and URL parameters before considering external libraries.
+* **Avoid Unnecessary Libraries:** You likely don't need libraries like Redux or Zustand for many applications.
+* **Context for Prop Drilling:** Use `useContext` to avoid passing props through many layers.
+* **`useReducer` for Complexity:** Use `useReducer` for more complex and intertwined state logic.
+* **State in URL:** Store state like filters in URL query parameters for shareability and simpler management.
+* **Meta-Frameworks:** Leverage frameworks like Next.js, especially server components, to reduce client-side state.
+* **Specialized Libraries:** Use libraries like React Hook Form for specific tasks like form management.
+* **Compartmentalize:** Break state into smaller, manageable chunks.
+* **When to Use Libraries:** Consider state management libraries only for very complex applications with extensive shared state.
+
+---
+
+## ⚙️ Back-End Development (Python, FastAPI, SQLModel)
+
+Guidelines for building our APIs and server-side logic.
+
+### 1. General Principles (Python & FastAPI)
+
+* **Python Version:** Use a recent stable version (3.8 or newer).
+* **Type Hints:** Use type hints for *all* function signatures.
+* **Async/Sync:** Use `async def` for asynchronous (I/O-bound) operations and `def` for synchronous or pure functions.
+* **PEP 8:** Adhere to the PEP 8 style guide.
+* **Virtual Environments:** Use virtual environments (`venv`, `conda`) to isolate dependencies.
+* **Project Structure:** Organize projects logically (routers, schemas/types, services/utilities, static).
+* **Named Exports:** Favor named exports for routes and utility functions.
+* **DRY Principle:** Avoid code duplication by refactoring.
+* **Data Structures:** Choose appropriate data structures for the task.
+* **Version Control:** Use Git for version control.
+
+### 2. FastAPI Specifics
+
+* **Path Operations:** Use path operation decorators (`@app.get`, `@app.post`) for routing. Use `async def` (or `def`) and type hints.
+* **Pydantic & SQLModel:** Use Pydantic models (often via SQLModel) for input validation, data validation, serialization, response schemas, and automatic documentation.
+* **Dependency Injection:** Leverage FastAPI's dependency injection for modularity, testability, and managing resources (like DB sessions).
+* **Lifespan Managers:** Prefer lifespan context managers over `@app.on_event` for startup/shutdown events.
+* **Middleware:** Use middleware for cross-cutting concerns like logging, error monitoring, auth, CORS, and performance tracking.
+* **Background Tasks:** Offload long-running operations to background tasks.
+* **Documentation:** Leverage automatic Swagger UI and ReDoc documentation.
+* **Security:** Implement authentication (OAuth2, JWT) and authorization.
+
+### 3. Database & ORM
+
+* **Prefer SQLModel:** Use `SQLModel` as the primary ORM, combining Pydantic and SQLAlchemy features.
+* **Use SQLAlchemy Directly (When Needed):** Only use SQLAlchemy 2.0+ directly for advanced features not in SQLModel.
+* **Asynchronous Operations:** Ensure all database interactions are asynchronous using `async def` and async drivers (e.g., `asyncpg`).
+* **Database Migrations:** Use tools like Alembic to manage schema changes.
+* **API Contracts:** Design clear and consistent API contracts.
+
+---
+
+## ⚠️ Error Handling & Validation
+
+* **Handle Early:** Prioritize handling errors and edge cases at the *beginning* of functions.
+* **Early Returns:** Use early returns for error conditions to avoid deep nesting.
+* **Happy Path Last:** Place the main logic (happy path) last for readability.
+* **Avoid `else`:** Use the `if-return` pattern instead of unnecessary `else` blocks.
+* **Guard Clauses:** Use guard clauses for preconditions and invalid states.
+* **FastAPI `HTTPException`:** Use `HTTPException` for expected errors, modeling them as specific HTTP responses.
+* **Middleware for Unexpected Errors:** Use middleware to handle unexpected errors, log them, and return generic responses.
+* **Logging:** Implement proper error logging.
+* **Pydantic/SQLModel Validation:** Rely on Pydantic/SQLModel for input/output validation.
+
+---
+
+## ⚡ Performance Optimization
+
+* **Minimize Blocking I/O:** Use `async` operations for all database and external API calls.
+* **Caching:** Implement caching (e.g., Redis, `fastapi-cache2`) for frequently accessed data.
+* **Optimize (De)Serialization:** Pydantic/SQLModel help, but be mindful.
+* **Lazy Loading:** Use lazy loading carefully, watching for N+1 issues.
+* **Monitor:** Monitor API performance metrics (response time, latency, throughput).
+
+---
+
+## 💡 General Programming Wisdom
+
+* **Rewrite Small Projects:** Don't fear rewriting small projects when learning; it often leads to better results.
+* **Focus, Don't Chase:** You don't need to know every new technology. Focus on what interests you and is relevant.
+* **Leverage Tools (Including AI):** Use available tools to boost efficiency, but always understand the code.
+* **Passion Projects are Optional:** You can be a great programmer without side projects.
