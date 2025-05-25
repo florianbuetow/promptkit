@@ -43,13 +43,6 @@ A collection of best practices, tools, and workflows for maximizing productivity
   - Documentation
   - Best practices
 
-## 🎯 Tech Stack Coverage
-
-- **Frontend:** ReactJS, JavaScript, TypeScript, TailwindCSS, HTML, CSS
-- **Backend:** Python, FastAPI, SQLModel
-- **Tools:** Cursor AI Editor, Shell utilities, MCP servers
-- **Workflows:** TDD, AI-assisted coding, project planning
-
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
