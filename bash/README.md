@@ -1,9 +1,9 @@
 # Bash Snippets
 
-Placed in your `~/.bashrc` or `~/.bash_profile` this bash function opens the git repository website of your current project (you must be inside a folder that is managed by git).
+The bash function opens the git repository website of your current project. Place it in your `~/.bashrc` or `~/.bash_profile` or `~/.zshrc` depending on which shell you use. Open a new terminal and run `opengit` inside a git repository path.
 
 ```bash
-open_git_remote() {
+opengit() {
   local url
   url=$(git config --get remote.origin.url | \
     uniq | \
@@ -24,3 +24,5 @@ open_git_remote() {
   fi
 }
 ```
+
+A
