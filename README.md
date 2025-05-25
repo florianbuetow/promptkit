@@ -1,18 +1,3 @@
-# Cursor AI Editor 
-
-## Tips
-
-### 
-
-How to activate/deactivate automatic tool use for specific commands via settings:
-
-![Cursor settings](cursor-settings.png)
-
-The settings might have changed in newer versions of Cursor?
-
-Note: Auto-run has recently been renamed to YOLO mode
-
-
 # Engineering Guidelines & Cursor Rules
 
 This repository contains the consolidated engineering guidelines for our full-stack development team. The core of this is the `fullstack_guide.mdc` file, designed to be used as a set of rules within the [Cursor](https://cursor.sh/) IDE.
@@ -139,6 +124,16 @@ You can find a [curated list of tools, plugins, and MCP servers for working with
 
 
 ## Workflow
+
+### Config
+
+How to activate/deactivate automatic tool use for specific commands via settings:
+
+![Cursor settings](cursor-settings.png)
+
+The settings might have changed in newer versions of Cursor?
+
+Note: Auto-run has recently been renamed to YOLO mode
 
 ### Test Driven Development
 
