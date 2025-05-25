@@ -11,3 +11,11 @@ This is a nice extension for Cursor/VSCode that allows you to inject some code i
 Project (open source): https://github.com/stagewise-io/stagewise/tree/main
 
 Demo video (short): https://www.youtube.com/watch?v=2RlBb4C_XwI
+
+
+## MCP Servers
+
+1. [Sequential Thinking MCP Server
+](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)
+
+An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process.
