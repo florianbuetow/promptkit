@@ -111,6 +111,10 @@ I then got an updated version in Markdown format that I could save as a cursor r
 
 You can find a [curated list of tools, plugins, and MCP servers for working with an AI powered developer workflow here](tools/README.md) 
 
+## Bash
+
+Random command line tools and snippets can be found here: [bash/README.md](bash/README.md)
+
 ## Cursor Editor
 
 [cursor.directory](https://cursor.directory/rules)
