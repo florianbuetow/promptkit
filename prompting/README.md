@@ -4,10 +4,33 @@ Master the art of prompting AI coding assistants for maximum productivity and co
 
 ## 📁 Contents
 
-- **[examples/](examples/)** - Example prompts and workflows
-- **[tdd-prompting.md](tdd-prompting.md)** - Test-driven development with AI
-- **[memory-bank.md](memory-bank.md)** - Using memory banks effectively
-- **[prompt-engineering.md](prompt-engineering.md)** - General prompting best practices
+### Development Methodologies
+
+- **[TDD Prompting](tdd-prompting.md)** - Test-driven development with AI
+  - Writing tests first
+  - Iterative implementation
+  - Quality assurance
+
+### Context Management
+
+- **[Memory Bank](memory-bank.md)** - Maintaining context across sessions
+  - Session persistence
+  - Project understanding
+  - Context optimization
+
+### Best Practices
+
+- **[Prompt Engineering](prompt-engineering.md)** - General prompting techniques
+  - Effective communication
+  - Task breakdown
+  - Pattern recognition
+
+### Examples
+
+- **[Examples](examples/)** - Proven prompt patterns and workflows
+  - Real-world scenarios
+  - Success patterns
+  - Common solutions
 
 ## 🚀 Key Concepts
 
@@ -33,4 +56,4 @@ Learn how to craft effective prompts that get you the results you want on the fi
 
 ## 🔗 Related Resources
 
-Check out the [cursor-ai-editor](../cursor-ai-editor/) section for editor-specific prompting techniques.
+- [Cursor AI Editor](../cursor-ai-editor/) - Editor-specific prompting techniques

@@ -4,9 +4,26 @@ Everything you need to know about maximizing productivity with the Cursor AI-pow
 
 ## 📁 Contents
 
-- **[settings/](settings/)** - Cursor configuration and settings optimization
-- **[cursor-rules/](cursor-rules/)** - Rules, examples, and creation workflows
-- **[project-planning/](project-planning/)** - Task management and project planning tools
+### Configuration
+
+- **[Settings](settings/)** - Editor configuration and optimization
+  - YOLO mode setup
+  - Auto-run configurations
+  - Visual guides and examples
+
+### Development Guidelines
+
+- **[Cursor Rules](cursor-rules/)** - Rules and best practices
+  - Example rules for different tech stacks
+  - Rule creation workflow
+  - Integration with Cursor chat
+
+### Project Management
+
+- **[Project Planning](project-planning/)** - Task and project management
+  - TaskMaster system
+  - Project templates
+  - AI-assisted planning
 
 ## 🚀 Quick Start
 
@@ -18,10 +35,6 @@ To leverage guidelines directly within your Cursor IDE for features like `@rules
 2. **Copy the Guide:** Place any `.mdc` file from the `cursor-rules/examples/` directory into the `.cursor/rules/` directory.
 
 ## 🎯 Key Features
-
-### ⚙️ Settings & Configuration
-
-Learn how to optimize Cursor settings for maximum productivity, including YOLO mode and auto-run configurations.
 
 ### 📋 Cursor Rules
 
