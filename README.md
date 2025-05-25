@@ -1,162 +1,121 @@
-# Engineering Guidelines & Cursor Rules
+# 🚀 PromptKit - AI-Powered Development Toolkit
 
-This repository contains the consolidated engineering guidelines for our full-stack development team. The core of this is the `fullstack_guide.mdc` file, designed to be used as a set of rules within the [Cursor](https://cursor.sh/) IDE.
+A collection of best practices, tools, and workflows for maximizing productivity with AI-powered development tools like Cursor, to improve your dev workflow.
 
-## `fullstack_guide.mdc`
+## 🎯 What is PromptKit?
 
-This file provides a comprehensive set of rules and best practices for developing high-quality code using our technology stack:
+PromptKit consolidates engineering guidelines, prompting strategies, and development workflows designed to help developers work more effectively with AI coding assistants. Whether you're using Cursor, other AI editors, or command-line tools, this toolkit provides proven patterns and practices.
 
-* **Front-End:** ReactJS, JavaScript, TypeScript, TailwindCSS, HTML, CSS
-* **Back-End:** Python, FastAPI, SQLModel
+## 📚 Table of Contents
 
-It ensures consistency, quality, and adherence to best practices across all our projects.
+### 1. 🐚 [Shell Tools & Utilities](shell/)
 
-### Sources
+Command-line tools, bash functions, and shell utilities to enhance your development workflow.
 
-This guide is built upon a foundation of established best practices and insights from experienced developers and resources, including:
+- **[Bash Snippets](shell/bash-snippets.md)** - Useful functions for your shell configuration
+- **[Scripts](shell/scripts/)** - Ready-to-use shell scripts
 
-* **Internal Best Practice Documents:** Synthesized knowledge from our existing `guide1.md`, `guide2.md`, `guide3.md`, `guide4.md`, and `guide5.md`.
-* **React State Management & Hooks:** Insights from videos like:
-    * [Learn useState In 15 Minutes - React Hooks Explained](https://www.youtube.com/watch?v=O6P86uwfdR0): Covering the Fundamentals and Usage of the `useState` hook in React.
-    * [State Managers Are Making Your Code Worse In React](https://www.youtube.com/watch?v=VenLRGHx3D4): Discussing the evolution of state management in React, advocating for built-in tools like Context API, `useReducer`, and URL-based state over external libraries in many cases.
-* **Programming Experience:** General wisdom from sources such as:
-    * [5 Things I Have Learned from 10+ Years of Programming](https://www.youtube.com/watch?v=dQfqbL3GjYA): Offering key lessons learned over a decade of programming to foster a more enjoyable and effective development journey.
-* **SQLModel Resources:** Best practices gathered from various web resources and documentation regarding SQLModel, FastAPI integration, and Pydantic v2.
+### 2. 🎯 [Prompting Strategies & Techniques](prompting/)
 
-## Using rules with Cursor
+Master the art of prompting AI coding assistants for maximum productivity and code quality.
 
-To leverage these guidelines directly within your Cursor IDE for features like `@rules` chat and code generation:
+- **[TDD Prompting](prompting/tdd-prompting.md)** - Test-driven development with AI
+- **[Memory Bank](prompting/memory-bank.md)** - Maintaining context across sessions
+- **[Examples](prompting/examples/)** - Proven prompt patterns and workflows
 
-1.  **Locate/Create the Cursor Rules Directory:** In the root directory of your project, find or create a hidden directory named `.cursor`. Inside it, find or create another directory named `rules`.
-2.  **Copy the Guide:** Place the `fullstack_guide.mdc` file from this repository into the `.cursor/rules/` directory.
+### 3. 🖱️ [Cursor AI Editor](cursor-ai-editor/)
 
+Everything you need to optimize your Cursor AI editor experience.
 
-# Guides
+#### 3.1 ⚙️ [Settings & Configuration](cursor-ai-editor/settings/)
 
-I created some guides with AI (Grok, Gemini, ChatGPT) using web search to compile and distill best practices and actionable advice.
+- **YOLO Mode** - Automatic command execution
+- **Auto-run Settings** - Configure tool automation
+- **Visual Guides** - Screenshots and setup instructions
 
-You might find them useful too:
+#### 3.2 📋 [Cursor Rules](cursor-ai-editor/cursor-rules/)
 
-```
-├── guides
-│   ├── General Insights on Project Plan Templates in Dev Workflows.pdf
-│   └── To maximize productivity with Cursor AI and effectively break down tasks, here are concrete tips based on best practices and insights from developers, including.pdf
-```
+- **[Examples](cursor-ai-editor/cursor-rules/examples/)** - Full-stack development rules
+- **[Creation Workflow](cursor-ai-editor/cursor-rules/creation-workflow/)** - Step-by-step rule creation guide
 
-# How to create your own cursorrules
+#### 3.3 📊 [Project Planning & Task Management](cursor-ai-editor/project-planning/)
 
-## Preparation:
+- **[TaskMaster](cursor-ai-editor/project-planning/taskmaster/)** - AI-powered task management system
+- **[Templates](cursor-ai-editor/project-planning/templates/)** - Project planning templates
 
-Collect a list of resources that give good advice on coding and best practices with the technologies that you are using in your project.
+### 4. 🛠️ [Tools & Extensions](tools-and-extensions/)
 
-I went to YouTube and searched and skimmed some of the videos that made sense to me.
+Curated collection of tools, plugins, and extensions for AI-assisted development.
 
-Then grab an example prompt that comes close to what you are trying to do. It will serve as a starter for the AI to craft your own cursor rules file. I took mine from [cursor.directory](https://cursor.directory/rules) where I selected one of the React prompts that sounded good.
+- **[Frontend Tools](tools-and-extensions/frontend-tools.md)** - Visual development tools
+- **[MCP Servers](tools-and-extensions/mcp-servers.md)** - Model Context Protocol servers
 
-Then you go to your favorite AI chat. I used Gemini 2.5 Pro because it can process YouTube links and is supposed to be great with logic and code. I don't know if that means it also gives great coding advice, but I am willing to just try it out.
+### 5. 🔄 [Development Workflows](workflows/)
 
-## Initial prompt
+Proven methodologies optimized for AI-assisted coding.
 
-```
-Please watch the following video and create me a list of rules and best practices to follow.
+- **Test-Driven Development** - TDD with AI assistance
+- **AI-Assisted Coding** - Best practices for human-AI collaboration
+- **Code Review Workflows** - AI-enhanced review processes
 
-<INSERT LINK TO YOUTUBE VIDEO #1>
+### 6. 📚 [Resources & References](resources/)
 
-Here is an example document on how to specify the rules and best practices to follow:
+External resources, videos, articles, and learning materials.
 
-<INSERT CONTENT OF EXAMPLE CURSOR RULES FILE>
-```
+- **YouTube Videos** - Curated educational content
+- **Websites & Tools** - Useful online resources
+- **Books & Articles** - Reading recommendations
 
-## Follow up prompt (2)
+## 🚀 Quick Start
 
-```
-Great thank you very much. Please now watch this video and add the advice and tips and best practices and guidelines given to your document: [
+### For Cursor Users
 
-<INSERT LINK TO YOUTUBE VIDEO #2>
-```
+1. **Set up Rules:** Copy rules from `cursor-ai-editor/cursor-rules/examples/` to your project's `.cursor/rules/` directory
+2. **Configure Settings:** Follow the guides in `cursor-ai-editor/settings/` to optimize your editor
+3. **Learn Prompting:** Study the techniques in `prompting/` for better AI interactions
 
-## Follow up prompt (3)
-```
-Perfection! Now lets add the advice from yet another video in the same manner as before: 
+### For Shell Users
 
-<INSERT LINK TO YOUTUBE VIDEO #3>
-```
+1. **Install Utilities:** Add functions from `shell/bash-snippets.md` to your shell configuration
+2. **Use Scripts:** Make scripts in `shell/scripts/` executable and add to your PATH
 
-## Follow up prompt (4)
+### For Project Planning
 
-I now wanted the AI to check our current results with this prompt:
+1. **Try TaskMaster:** Set up the AI-powered task management system
+2. **Use Templates:** Start with templates from `cursor-ai-editor/project-planning/templates/`
 
-```text
-Please critically review the guide we've created so far. Justify every single point on why it should be in the guide. If a point is not strong enough, admit it so we can remove it to keep our guide as informative and actionable as possible! THIS IS FOR MAKING THE BEST ENGINEERS POSSIBLE!!!!!!!!!
-```
+## 🎯 Tech Stack Coverage
 
-## Follow up prompt (5)
+Our guidelines and examples cover:
 
-And after the AI didn't find anything to remove, I asked it to create me a markdown version of the current set of rules
-```
-Please create me a cursorrules file from this (markdown format with yaml header)
-```
+- **Frontend:** ReactJS, JavaScript, TypeScript, TailwindCSS, HTML, CSS
+- **Backend:** Python, FastAPI, SQLModel
+- **Tools:** Cursor AI Editor, Shell utilities, MCP servers
+- **Workflows:** TDD, AI-assisted coding, project planning
 
-## Follow up prompt (6)
+## 💡 Philosophy
 
-When proofreading the output, I discovered something unwanted, so I followed up with a correction:
+- **AI as a Collaborator** - Work with AI, don't just use it
+- **Quality First** - Maintain high code standards with AI assistance
+- **Iterative Improvement** - Continuously refine your AI workflows
+- **Knowledge Sharing** - Document and share successful patterns
 
-```
-We need to create a revision because we will use FastAPI and Python for the backend instead of NextJS.
-```
+## 🤝 Contributing
 
-I then got an updated version in Markdown format that I could save as a cursor rules mdc file.
+We welcome contributions! Whether it's:
 
-# Resources
+- New prompting techniques
+- Additional cursor rules
+- Useful tools and extensions
+- Workflow improvements
+- Documentation enhancements
 
-You can find a [curated list of tools, plugins, and MCP servers for working with an AI powered developer workflow here](tools/README.md) 
+Please feel free to submit issues and pull requests.
 
-## Bash
+## 📄 License
 
-Random command line tools and snippets can be found here: [bash/README.md](bash/README.md)
+This project is open source and available under the [MIT License](LICENSE).
 
-## Cursor Editor
+---
 
-[cursor.directory](https://cursor.directory/rules)
-[A curated list of MCP servers](https://github.com/modelcontextprotocol/servers)
-
-## YouTube Videos:
-
-[How I reduced 90% errors for my Cursor (+ any other AI IDE)](https://www.youtube.com/watch?v=1L509JK8p1I)
-[How I reduced 90% errors for my Cursor (Part 2)
-](https://www.youtube.com/watch?v=dF4uCZAY1tk)
-
-
-## Workflow
-
-### Config
-
-How to activate/deactivate automatic tool use for specific commands via settings:
-
-![Cursor settings](cursor-settings.png)
-
-The settings might have changed in newer versions of Cursor?
-
-Note: Auto-run has recently been renamed to YOLO mode
-
-### Test Driven Development
-
-Don't be the guy who just says "fix this" in a loop.
-
-Instead: Write the test first, get the AI to iterate on the implementation of the function until the test passes
-
-Or even better: Turn on YOLO mode, ask to write the test, write the function and iterate fixing the function.
-
-![TDD](tdd.jpg)
-
-YOLO mode needs to be activated first in settings
-
-![YOLO](yolo.jpg)
-
-Here is an example TDD prompt. You should add an example input and expected output as well to help the AI develop what you want it to.
-
-![TDD prompt](tdd-prompt.jpg)
-
-### Memory Bank
-
-The idea of the memory bank was first (?) documented by cline (another AI editor) in [The Complete Guide to Cline Memory Bank](https://docs.cline.bot/prompting/cline-memory-bank)
+_Built with ❤️ for the AI-assisted development community_
